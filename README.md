@@ -69,7 +69,7 @@ Open [http://localhost:3000](http://localhost:3000)
 
 ------------------------------------------------------------------------------------------------------------------------
 
-Steps completed to make this project runnable on windows:
+**Steps completed to make this project runnable on windows:**
 
 Fixed Windows PowerShell script execution policy
 

@@ -32,13 +32,16 @@
     "cmdk": "^1.1.1",
     "jose": "^6.0.11",
     "lucide-react": "^0.517.0",
-    "next": "15.3.3",
+    "next": "^15.5.15",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-markdown": "^10.1.0",
     "react-resizable-panels": "^3.0.3",
     "server-only": "^0.0.1",
     "tailwind-merge": "^3.3.1"
+  },
+  "overrides": {
+    "jsondiffpatch": ">=0.7.2"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
