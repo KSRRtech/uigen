@@ -65,3 +65,39 @@ Open [http://localhost:3000](http://localhost:3000)
 - Prisma with SQLite
 - Anthropic Claude AI
 - Vercel AI SDK
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+Steps completed to make this project runnable on windows:
+
+Fixed Windows PowerShell script execution policy
+
+Ran: **Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser -Force**
+Verified Next.js was already in package.json
+
+next was present as a dependency (15.3.3).
+Installed project dependencies
+
+Run: **npm install**
+Removed unsupported NODE_OPTIONS usage
+
+Updated package.json scripts to stop using NODE_OPTIONS
+This avoids the Windows NODE_OPTIONS command syntax error and Electron packaged-app restriction.
+Loaded node-compat.cjs from next.config.ts
+
+Added: **require("./node-compat.cjs");**
+This makes the Node 25+ Web Storage SSR compatibility fix load without needing NODE_OPTIONS.
+Generated Prisma client
+
+Run: **npx prisma generate**
+Or use: **npm run setup**
+This resolves Can't resolve '@/generated/prisma'.
+Final commands to run
+Install dependencies: **npm install**
+
+Generate Prisma client: **npx prisma generate**
+
+Start development server: **npm run dev**
+
+
